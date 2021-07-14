@@ -19,11 +19,12 @@ io.on('connection', (socket)=>{
     // listen for message from user
     socket.on('createMessage', (newMessage)=>{
       console.log('newMessage', newMessage);
+      console.log (socket.client.conn.server.clientsCount)
     });
    
     // when server disconnects from user
-    socket.on('disconnect', ()=>{
-      console.log('disconnected from user');
+    socket.on('disconnecting', (params)=>{
+      console.log('disconnected from user===>', socket.id);
     });
   });
    

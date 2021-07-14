@@ -16,7 +16,6 @@ io.on('connection', (socket)=>{
        text:'test',
        createdAt:123
      });
-   
     // listen for message from user
     socket.on('createMessage', (newMessage)=>{
       console.log('newMessage', newMessage);
